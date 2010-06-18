@@ -2,6 +2,12 @@ Based on RAPI Doc by Jaap van der Meer found here: http://code.google.com/p/rapi
 
 Updated to work with Rails 2.3 by Chelsea Robb
 
+TODO  - Update README to be more clear
+      - Change where documentation gets generated to, right now it just generates to the script folder
+      - Support multiple returns to explain reasons for error codes
+      - Convert to plugin or gem
+      - Make class documentation work
+
 Previous Readme:
 
 Rails Api Doc Generator
