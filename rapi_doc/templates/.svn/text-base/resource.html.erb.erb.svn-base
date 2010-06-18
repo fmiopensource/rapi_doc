@@ -1,0 +1,9 @@
+<a href="/api">&laquo; Back to index</a>
+
+<%=@header_code %>
+
+<% @method_codes.each do |mc| %>
+  <%=mc %>
+<% end %>
+
+<%=DocUtil.print_erb "render :partial => \"sidebar\" ", true %>

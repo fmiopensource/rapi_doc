@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/2/trunk/templates
+END
+_resource_header.html.erb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/templates/_resource_header.html.erb.erb
+END
+api_controller.rb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/templates/api_controller.rb.erb
+END
+_resource_method.html.erb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/templates/_resource_method.html.erb.erb
+END
+index.html.erb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/6/trunk/templates/index.html.erb.erb
+END
+resource.html.erb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/templates/resource.html.erb.erb
+END

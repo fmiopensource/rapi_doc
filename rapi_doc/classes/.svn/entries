@@ -1,0 +1,64 @@
+8
+
+dir
+2
+https://rapidoc.googlecode.com/svn/trunk/classes
+https://rapidoc.googlecode.com/svn
+
+
+
+2008-05-06T22:28:39.104612Z
+2
+jaapvandermeer
+
+
+svn:special svn:externals svn:needs-lock
+
+doc_util.rb
+file
+3
+
+
+
+2008-05-06T22:52:09.000000Z
+90ac2ee960bdac321f1d4e1bec364c6e
+2008-05-06T22:50:47.763323Z
+3
+jaapvandermeer
+
+apidoc_generator.rb
+file
+
+
+
+
+2008-05-06T16:37:19.000000Z
+ed2e9f7b5893fc6db57abfe4eda0ce68
+2008-05-06T22:28:39.104612Z
+2
+jaapvandermeer
+
+method_doc.rb
+file
+3
+
+
+
+2008-05-06T22:46:14.000000Z
+fab3ec2cf9b2bb49156ba5b9e3af6739
+2008-05-06T22:50:47.763323Z
+3
+jaapvandermeer
+
+resource_doc.rb
+file
+5
+
+
+
+2008-05-06T22:58:33.000000Z
+5c08417f80096d6b109d1d9a00208349
+2008-05-06T22:58:58.764551Z
+5
+jaapvandermeer
+
