@@ -1,13 +1,47 @@
-RapiDoc
-=======
+Based on RAPI Doc by Jaap van der Meer found here: http://code.google.com/p/rapidoc/
 
-Introduction goes here.
+Rails Api Doc Generator
+Original Author: JPM van der Meer
+Modified By: Chelsea Robb
+=======================
+With API DOC one can generate code for a Restful Rails API. 
+It generates a set of HTML views in the public directory.  Parses the desired controllers and generates appropriate views.  
+Currently does not read routes.rb and requires manual entry of routes
+
+=INSTALL
+    script/plugin install git@github.com:fmiopensource/rapi_doc.git
+
+==Templates
+Templates can be used for tuning your method generation and index.html.erb.
+
+==Structure
+In the structure folder one can setup some additional views to be used for the apidoc controller generator.
+
+==Usage
+In vendor/plugins/rapi_doc/tasks/rapi_doc.rake update the resources to reflect your desired resources to document
+Invoke the generation by calling
+    rake rapi_doc
+
+EXAMPLE Method documentation
+
+=begin apidoc
+url:: /projects
+method:: GET
+access:: FREE
+return:: [JSON|XML] - some project  
+param:: page:int - the page
+param:: per_page:int - max items per page
+
+Get a list of projects. This method uses pagination. If you want to retreive project 1-10 for example:
+/projects?page=1&per_page=10.
+=end
 
 
-Example
-=======
+TODO  - Update README to be more clear
+      - Change where documentation gets generated to, right now it just generates to the script folder
+      - Support multiple returns to explain reasons for error codes
+      - Make class documentation work
+      - Write tests and make them work
 
-Example goes here.
+ 
 
-
-Copyright (c) 2010 [name of plugin creator], released under the MIT license
