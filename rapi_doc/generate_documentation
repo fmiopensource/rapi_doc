@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-require File.dirname(__FILE__) + '/classes/rapidoc.rb'
-
-# define your resources here
-resources = [   ResourceDoc.new("resource", "/resources", "resource_controller.rb" ), 
-                ResourceDoc.new("tree", "/trees/[tree_id]/leafs", "leafs_controller.rb" )]
-
-# generate the apidoc
-RAPIDoc.new(resources)

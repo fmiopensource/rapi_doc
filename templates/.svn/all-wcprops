@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/qrrent_ar/!svn/ver/1677/branches/lt_branch/vendor/plugins/rapi_doc/templates
+END
+_resource_header.html.erb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/qrrent_ar/!svn/ver/1677/branches/lt_branch/vendor/plugins/rapi_doc/templates/_resource_header.html.erb.erb
+END
+api_controller.rb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/qrrent_ar/!svn/ver/1677/branches/lt_branch/vendor/plugins/rapi_doc/templates/api_controller.rb.erb
+END
+_resource_method.html.erb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/qrrent_ar/!svn/ver/1677/branches/lt_branch/vendor/plugins/rapi_doc/templates/_resource_method.html.erb.erb
+END
+index.html.erb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/qrrent_ar/!svn/ver/1677/branches/lt_branch/vendor/plugins/rapi_doc/templates/index.html.erb.erb
+END
+resource.html.erb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/qrrent_ar/!svn/ver/1677/branches/lt_branch/vendor/plugins/rapi_doc/templates/resource.html.erb.erb
+END
