@@ -1,1 +1,1 @@
-require 'rapdoc'
+require 'rapi_doc'
