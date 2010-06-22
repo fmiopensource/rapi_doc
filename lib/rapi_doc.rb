@@ -15,24 +15,14 @@ class RAPIDoc
   end
 
   # Iterates over the resources creates views for them.
-  # Creates a controller
-  # Creates a index file
+  # Creates an index file
   def generate_templates!
 
     @resources.each do |r|
       r.parse_apidoc!
-      r.generate_view!
+      r.generate_view!(@resources)
     end
     generate_index!
-  end
-
-  # takes all resources and writes it to the apidoc
-  # as methods
-  def generate_controller!
-    template = ""
-    File.open(File.join(File.dirname(__FILE__), '..', 'templates', 'api_controller.rb.erb')).each { |line| template << line }
-    parsed = ERB.new(template).result(binding)
-    File.open(File.join(File.dirname(__FILE__), '..', 'structure', 'controllers','api_controller.rb'), 'w') { |file| file.write parsed }
   end
 
   # generate the index file for the api views
@@ -49,7 +39,7 @@ class RAPIDoc
   end
 
   def move_structure!
-    target_folder = File.dirname(__FILE__) + "/../../../../public/apidoc/"
+    target_folder = "#{RAILS_ROOT}/public/apidoc/"
 
     if (!File.directory?(target_folder))
       Dir.mkdir(target_folder)
@@ -59,7 +49,14 @@ class RAPIDoc
       if d =~ /^[a-zA-Z]+\.html$/ # Only want to copy over the .html files, not the .erb templates
         FileUtils.cp  File.join(File.dirname(__FILE__), '..', '/structure/views/apidoc/' + d), target_folder + d
       end
+
+      #Clean up the no longer needed files
+      filepath = "#{File.dirname(__FILE__)}/../structure/views/apidoc/#{d}"
+      File.delete(filepath) unless File.directory?(filepath)
     end
+
+
   end
 
 end
+
