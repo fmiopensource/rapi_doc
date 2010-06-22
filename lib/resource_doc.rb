@@ -16,7 +16,7 @@ class ResourceDoc
     @header_code = ""
     
     unless File.exist?(controller_location)
-      raise "Please put this rapidoc dir in your rails project into the script directory. File: #{controller_location}"
+      raise "Unable to find or open controller. File: #{controller_location}"
     end
   end
   
@@ -28,7 +28,7 @@ class ResourceDoc
   
   # returns the location of the controller that is to be parsed
   def controller_location
-    File.dirname(__FILE__) + "/../../../../app/controllers/#{controller_name}"
+    "#{RAILS_ROOT}/app/controllers/#{controller_name}"
   end
   
   def get_binding
@@ -64,9 +64,8 @@ class ResourceDoc
           # strip the # on the line
           #line = line[1..line.length].lstrip.rstrip
           # check if we are dealing with a variable
-          # something in the format: # varname: sometext
+          # something in the format: # varname:: sometext
           if result = /(\w+)\:\:\s*(.+)/.match(line)
-            puts "Debug: found var " + result[1] + " on line " + lineno.to_s + " : " + result[2]
             current_api_block.add_variable(result[1], result[2])
           else
             # add line to block
@@ -75,9 +74,12 @@ class ResourceDoc
         end
         lineno += 1
     end
+
+    puts "Documented #{name}"
   end
   
-  def generate_view!
+  def generate_view!(resources)
+     @resources = resources
      @header_code = get_parsed_header unless @class_block.nil?
      function_blocks.each do |mb|
        @method_codes << get_parsed_method(mb)
@@ -104,6 +106,7 @@ class ResourceDoc
   end
     
 end
+
 
 
 
