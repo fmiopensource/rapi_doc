@@ -9,7 +9,7 @@ It generates a set of HTML views in the public directory.  Parses the desired co
 Currently does not read routes.rb and requires manual entry of routes
 
 =INSTALL
-    script/plugin install git@github.com:fmiopensource/rapi_doc.git
+    script/plugin install git://github.com/fmiopensource/rapi_doc
 
 ==Templates
 Templates can be used for tuning your method generation and index.html.erb.
@@ -18,8 +18,13 @@ Templates can be used for tuning your method generation and index.html.erb.
 In the structure folder one can setup some additional views to be used for the apidoc controller generator.
 
 ==Usage
-In vendor/plugins/rapi_doc/tasks/rapi_doc.rake update the resources to reflect your desired resources to document
-Invoke the generation by calling
+Create a documentation.yml inside your config directory.  In this config file specify the controllers you wish to 
+generate documentation for in the following format:
+users:
+  location: "/users"
+  controller_name: "users_controller.rb"
+  
+Then invoke the generation by calling:
     rake rapi_doc
 
 EXAMPLE Method documentation
@@ -37,10 +42,7 @@ Get a list of projects. This method uses pagination. If you want to retreive pro
 =end
 
 
-TODO  - Update README to be more clear
-      - Change where documentation gets generated to, right now it just generates to the script folder
-      - Support multiple returns to explain reasons for error codes
-      - Make class documentation work
+TODO  - Make class documentation work
       - Write tests and make them work
 
  
