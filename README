@@ -4,8 +4,8 @@ Rails Api Doc Generator
 Original Author: JPM van der Meer
 Modified By: Chelsea Robb
 =======================
-With API DOC one can generate code for a Restful Rails API. 
-It generates a set of HTML views in the public directory.  Parses the desired controllers and generates appropriate views.  
+With API DOC one can generate code for a Restful Rails API.
+It generates a set of HTML views in the public directory.  Parses the desired controllers and generates appropriate views.
 Currently does not read routes.rb and requires manual entry of routes
 
 =INSTALL
@@ -18,32 +18,28 @@ Templates can be used for tuning your method generation and index.html.erb.
 In the structure folder one can setup some additional views to be used for the apidoc controller generator.
 
 ==Usage
-Create a documentation.yml inside your config directory.  In this config file specify the controllers you wish to 
+Create a documentation.yml inside your config directory.  In this config file specify the controllers you wish to
 generate documentation for in the following format:
 users:
   location: "/users"
   controller_name: "users_controller.rb"
-  
+
 Then invoke the generation by calling:
     rake rapi_doc
 
-EXAMPLE Method documentation
+==Documentation Example
 
 =begin apidoc
-url:: /projects
+url:: /users
 method:: GET
 access:: FREE
-return:: [JSON|XML] - some project  
-param:: page:int - the page
-param:: per_page:int - max items per page
+return:: [JSON|XML] - list of user objects
+param:: page:int - the page, default is 1
+param:: per_page:int - max items per page, default is 10
 
-Get a list of projects. This method uses pagination. If you want to retreive project 1-10 for example:
-/projects?page=1&per_page=10.
+Get a list of all users in the system with pagination.  Defaults to 10 per page
 =end
 
-
+=======================
 TODO  - Make class documentation work
       - Write tests and make them work
-
- 
-
